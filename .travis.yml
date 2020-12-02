@@ -1,0 +1,15 @@
+language: node_js
+node_js:
+  - '11'
+install: npm install
+after_script:
+  - cd ./public
+  - git init
+  - git config user.name "LiuGuinv"
+  - git config user.email "997207868@qq.com"
+  - git add -A
+  - git commit -m "Update documents"
+  - git push --force "https://${0ee26ad3d7877a8a22ebfc97bfcb612443ce9622}@${github.com/LiuGuinv/react-typescript.git}" "master:gh-pages"
+branches:
+  only:
+    - master
